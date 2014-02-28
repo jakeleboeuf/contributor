@@ -1,7 +1,12 @@
-var fs = require("fs");
-var request = require('request');
-var pack = require('../package.json');
-var _ = require('underscore');
+
+var path   = require('path'),
+  fs = require("fs"),
+  request = require('request'),
+  rootDir = process.cwd(),
+  sourceJson = path.join(rootDir, 'package.json'),
+  dupJson = path.join(rootDir, '.package.json')
+  pack = require(sourceJson),
+  _ = require('underscore');
 
 function main() {
 
@@ -37,11 +42,10 @@ function main() {
             user.hireable = userInfo.hireable;
             contributors.push(user);
           }
-          // now Save the data
-          var fileName = './package.json';
+          
           i++;
           if(i == info.length){
-            saveData(fileName, contributors);
+            saveData(dupJson, contributors);
           }
         }
         // Make user info request

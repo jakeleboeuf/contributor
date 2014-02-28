@@ -1,6 +1,6 @@
 #Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.png)](https://travis-ci.org/jakeleboeuf/contributor)
 
-A simple module to add git contributors to your package.json.
+A simple module to add git contributors to your package.json. Public repos only for now. Private repos may be possible if I get some time ;)
 
 ## Install from [npm](https://www.npmjs.org/package/contributor)
 
@@ -31,3 +31,6 @@ This will simply add the pushc alias to your .git/config file like so:
 	  pushc = !git push $1 $2 && contributor
 	  
 Then you can run `git pushc origin master`, and voila! Give it a try on your next project and let me know what you think!
+
+### Show some love and throw me a few pennies
+[![Support via Gittip](https://rawgithub.com/twolfson/gittip-badge/0.2.0/dist/gittip.png)](https://www.gittip.com/jakeleboeuf/)
