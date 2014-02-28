@@ -1,17 +1,27 @@
+/*
+ * contributor.js: a package.json contributor customizer
+ *
+ * (C) 2014 Jake LeBoeuf
+ * MIT LICENCE
+ *
+ */
+
 
 var path   = require('path'),
   fs = require("fs"),
   request = require('request'),
+  _ = require('underscore'),
   rootDir = process.cwd(),
   sourceJson = path.join(rootDir, 'package.json'),
   dupJson = path.join(rootDir, '.package.json')
   pack = require(sourceJson),
-  _ = require('underscore');
+  contribApi = pack.repository.url.split('/');
 
 function main() {
 
-  var contribApi = pack.repository.url.split('/');
+  //
   // Request info from github repo
+  //
   var options = {
     url: 'https://api.github.com/repos/'+contribApi[3]+'/'+contribApi[4]+'/contributors?client_id=ebb50cd63049a8f68cec&client_secret=9d580524b9135c545dc697820c170d2c737604fe',
     headers: {
@@ -24,7 +34,10 @@ function main() {
       var contributors = [];
       i=0;
       info.forEach(function(contributor){
+        
+        //
         // User info request
+        //
         var userOptions = {
           url: contributor.url+'?client_id=ebb50cd63049a8f68cec&client_secret=9d580524b9135c545dc697820c170d2c737604fe',
           headers: {
@@ -45,26 +58,29 @@ function main() {
           
           i++;
           if(i == info.length){
-            saveData(dupJson, contributors);
+            saveData(sourceJson, contributors);
           }
         }
+
         // Make user info request
         request(userOptions, userCallback);
         
       });
     }
   }
+
   // Make request for info from repo
   request(options, callback);
 
+  //
   // Save new file 
+  //
   function saveData(file, data) {
-    // Empty the contributors array
-    // pack.contributors = [];
+
     // Save backup to .package.json
-    fs.writeFile('./.package.json', JSON.stringify(pack, null, 2), function(err) {
+    fs.writeFile(dupJson, JSON.stringify(pack, null, 2), function(err) {
       if(err) {
-        console.log(err);
+        new Error(err)
       } else {
         console.info("Saved a backup as", './.package.json');
       }

@@ -1,7 +1,5 @@
 {
-  "author": {
-    "name": "Jake LeBoeuf"
-  },
+  "author": "Jake LeBoeuf",
   "name": "contributor",
   "description": "A simple module to add git contributors to your package.json.",
   "version": "0.0.12",
@@ -33,5 +31,13 @@
   "dependencies": {
     "underscore": "1.6.x",
     "request": "2.34.x"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Jake LeBoeuf",
+      "email": "dev@jakeleboeuf.com",
+      "url": "https://github.com/jakeleboeuf",
+      "hireable": true
+    }
+  ]
 }
