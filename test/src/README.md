@@ -1,4 +1,4 @@
-#Contributor [![Build Status](https://magnum.travis-ci.com/jklb/chassis.png?token=uGisoz3mnYP4xoJZZT2Q)](https://magnum.travis-ci.com/jklb/chassis)
+#Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.png)](https://travis-ci.org/jakeleboeuf/contributor)
 
 A simple module to add git contributors to your package.json.
 
@@ -9,10 +9,11 @@ A simple module to add git contributors to your package.json.
 
 ## Run
 
-To pull code contributor in from your github repo just run:
+To grab contributor info from your github repo, `cd` into the directory containing your `package.json` and run:
 	
 	$ contributor
 
+Bingo!
 
 ### Behind the scenes
 
