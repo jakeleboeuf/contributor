@@ -1,0 +1,30 @@
+{
+  "author": "Jake LeBoeuf",
+  "name": "Contributor",
+  "description": "A simple module to add git contributors to your package.json.",
+  "version": "0.0.3",
+  "homepage": "http://jakeleboeuf.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakeleboeuf/contributor"
+  },
+  "bugs": {
+    "url": "https://github.com/jakeleboeuf/contributor/issues"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.4.x"
+  },
+  "dependencies": {
+    "underscore": "1.6.x",
+    "request": "2.34.x"
+  },
+  "contributors": [
+    {
+      "name": "Jake LeBoeuf",
+      "email": "dev@jakeleboeuf.com",
+      "url": "https://github.com/jakeleboeuf",
+      "hireable": true
+    }
+  ]
+}
