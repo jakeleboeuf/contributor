@@ -2,7 +2,7 @@
   "author": "Jake LeBoeuf",
   "name": "contributor",
   "description": "A simple module to add git contributors to your package.json.",
-  "version": "0.0.3",
+  "version": "0.0.3-1",
   "homepage": "http://jakeleboeuf.com",
   "repository": {
     "type": "git",

@@ -23,7 +23,7 @@ It will make a backup your original to .package.json so all your secret codes ar
 
 
 #### Pro tip: Add a git push alias and kill a couple birds.
-	$ git config alias.pushc \!git push $1 $2 && node collab
+	$ git config alias.pushc \!git push $1 $2 && node contributor
 	
 This will simply add the pushc alias to your .git/config file like so:
 
