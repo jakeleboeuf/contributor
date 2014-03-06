@@ -1,6 +1,6 @@
 #Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.png)](https://travis-ci.org/jakeleboeuf/contributor)
 
-A simple [node](http://nodejs.org) module to grab your project contributors from your github repo and add them to your package.json. Private repos are available as of 0.1.6!
+A simple [node](http://nodejs.org) module to grab your project contributors from your github repo and adds them to your package.json. Private repos are available as of 0.1.6!
 
 [![NPM](https://nodei.co/npm/contributor.png)](https://nodei.co/npm/contributor/)
   
