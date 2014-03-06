@@ -1,8 +1,7 @@
-#Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.png)](https://travis-ci.org/jakeleboeuf/contributor)
+#Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.png)](https://travis-ci.org/jakeleboeuf/contributor) [![GitHub version](https://badge.fury.io/gh/jakeleboeuf%2Fcontributor.png)](http://badge.fury.io/gh/jakeleboeuf%2Fcontributor)
 
 A simple [node](http://nodejs.org) module to grab your project contributors from your github repo and adds them to your package.json. Private repos are available as of 0.1.6!
 
-[![NPM](https://nodei.co/npm/contributor.png)](https://nodei.co/npm/contributor/)
   
 
 ## Install from [npm](https://www.npmjs.org/package/contributor)
@@ -133,4 +132,7 @@ After `$ contributor`:
   ]
 }
 ```
+
 [![Support via Gittip](https://rawgithub.com/twolfson/gittip-badge/0.2.0/dist/gittip.png)](https://www.gittip.com/jakeleboeuf/)
+
+[![NPM](https://nodei.co/npm/contributor.png)](https://nodei.co/npm/contributor/) 
