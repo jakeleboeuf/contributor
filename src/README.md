@@ -44,7 +44,7 @@ Bingo! Your `package.json` will be appended with something like this:
 
 As of [v0.1.12](https://github.com/jakeleboeuf/contributor/releases/tag/v0.1.12), you'll be prompted to optionally `Save to contributors.md? (yes/no)`.
 
-![Alt text](https://photos-3.dropbox.com/t/0/AABGtK8ebrFHwOFTvY7-yRblFsC15Zagtl8noEJuhveSrQ/12/2935664/png/2048x1536/3/1394812800/0/2/Screenshot%202014-03-14%2010.46.19.png/ExQPXlCEgn7CuPopeBp4Z1kFgzFkKSnDpbIQ6Jd1HRY)
+![Prompt](https://raw.github.com/jakeleboeuf/contributor/master/img/mdPrompt.png)
 
 ### Behind the scenes
 
