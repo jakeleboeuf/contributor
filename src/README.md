@@ -1,6 +1,5 @@
 #Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.png)](https://travis-ci.org/jakeleboeuf/contributor) [![GitHub version](https://badge.fury.io/gh/jakeleboeuf%2Fcontributor.png)](http://badge.fury.io/gh/jakeleboeuf%2Fcontributor)
-
-A simple [node](http://nodejs.org) module to grab your project contributors from your github repo and adds them to your package.json. Private repos are available as of 0.1.6!
+A simple [node](http://nodejs.org) module to grab your project contributors from your github repo and add them to your package.json. You'll also be prompted to generate a Markdown version of your contributors list and save it to `contributors.md`.
 
   
 
@@ -43,6 +42,10 @@ Bingo! Your `package.json` will be appended with something like this:
 }
 ```
 
+As of [v0.1.12](https://github.com/jakeleboeuf/contributor/releases/tag/v0.1.12), you'll be prompted to optionally `Save to contributors.md? (yes/no)`.
+
+![Alt text](https://photos-3.dropbox.com/t/0/AABGtK8ebrFHwOFTvY7-yRblFsC15Zagtl8noEJuhveSrQ/12/2935664/png/2048x1536/3/1394812800/0/2/Screenshot%202014-03-14%2010.46.19.png/ExQPXlCEgn7CuPopeBp4Z1kFgzFkKSnDpbIQ6Jd1HRY)
+
 ### Behind the scenes
 
 [Contributor](https://www.npmjs.org/package/contributor) hunts for repository.url in your your `package.json`. If it finds a valid repo url, it requests collaborator info from the github api and adds it to your `package.json`. Super simple. If your repo is private, you'll be prompted for your Github username/password.
@@ -65,7 +68,7 @@ Then you can run `git pushc origin master`, and voila! Give it a try on your nex
 ###Examle output
 
 
-Before `$ contributor`:
+package.json **Before** `$ contributor`:
 
 
 ```json
@@ -95,7 +98,7 @@ Before `$ contributor`:
 }
 ```
 
-After `$ contributor`:
+package.json **After** `$ contributor`:
 
 ```json
 {
