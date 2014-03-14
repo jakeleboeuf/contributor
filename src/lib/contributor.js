@@ -11,6 +11,7 @@ var path       = require('path'),
     Github     = require('github'),
     color      = require("ansi-color").set,
     prompt     = require("prompt"),
+    yesno      = require("yesno"),
     rootDir    = process.cwd(),
     sourceJson = path.join(rootDir, 'package.json'),
     dupJson    = path.join(rootDir, '.package.json'),
@@ -113,7 +114,7 @@ contributor.start = function (next) {
                 user.hireable = userInfo.hireable;
                 contributors.push(user);
               }
-              
+
               i++;
               if(i == info.length){
                 saveData(sourceJson, contributors);
@@ -122,7 +123,7 @@ contributor.start = function (next) {
 
             // Make user info request
             request(userOptions, userCallback);
-            
+
           });
         });
       });
@@ -130,7 +131,7 @@ contributor.start = function (next) {
     // If rate limit has been exceeded
     if(response.statusCode === 403) {
       console.log(color('✖ You\'ve exceeded github\'s API limit.', 'red+bold'),
-        color('Try again in a minute or two.', 'red+bold'));
+        color('Try again in 5 or 10 minutes.', 'red+bold'));
     }
     // If request was successful
     if (!error && response.statusCode === 200) {
@@ -159,7 +160,7 @@ contributor.start = function (next) {
             user.hireable = userInfo.hireable;
             contributors.push(user);
           }
-          
+
           i++;
           if(i == info.length){
             saveData(sourceJson, contributors);
@@ -168,7 +169,7 @@ contributor.start = function (next) {
 
         // Make user info request
         request(userOptions, userCallback);
-        
+
       });
     }
   }
@@ -176,7 +177,7 @@ contributor.start = function (next) {
   // Make request for info from repo
   request(options, callback);
 
-  // Save new file 
+  // Save new file
   function saveData(file, data) {
     // Save backup to .package.json
     fs.writeFile(dupJson, JSON.stringify(pack, null, 2), function(err) {
@@ -203,7 +204,49 @@ contributor.start = function (next) {
             "Contributors added to your",
             color("package.json", "magenta"),
             'from Github');
-          status();
+
+          // Markdown
+          mkPerson = [
+            '## Contributors',
+            '##### [Generated](https://github.com/jakeleboeuf/contributor) on '+ new Date()
+          ];
+          yesno.ask('Save to contributors.md? (yes/no)', true, function(ok) {
+            if(ok) {
+              i=0;
+              data.forEach(function(person){
+                mkPerson.push('- ['+person.name+']('+person.url+')');
+                if(i === (data.length)-1){
+                  var markdown = mkPerson.sort()
+                    .toString()
+                    .split(",")
+                    .join("\n");
+
+                  console.log(color("✔", "green+bold"),
+                    "Contributors added to your",
+                    color("contributors.md", "magenta"),'as:');
+                  console.log(color(markdown, "magenta"));
+                  fs.writeFile('contributors.md', markdown, function(err) {
+                    if(err) {
+                      console.log(err);
+                      status();
+                      process.exit(code=1);
+                      return;
+                    } else {
+                      status();
+                      process.exit(code=0);
+                      return;
+                    }
+                  });
+                  return;
+                }
+                i++;
+              });
+            } else {
+              status();
+              process.exit(code=0);
+              return;
+            }
+          }, ['yes'],['no']);
         }
       });
     }
