@@ -20,7 +20,9 @@
     "collaborate",
     "author",
     "github",
-    "package"
+    "package",
+    "markdown",
+    "md"
   ],
   "bin": {
     "contributor": "./bin/contributor"
