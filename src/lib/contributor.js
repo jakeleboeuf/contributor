@@ -47,7 +47,7 @@ contributor.start = function (next) {
   function callback(error, response, body) {
     // If repo is private
     if(response.statusCode === 404) {
-      console.log(color('Please login to Github access your private repo:', 'magenta'));
+      console.log(color('Please login to Github to access this private repo:', 'magenta'));
 
       // Prompt:
        var schema = {
@@ -224,7 +224,7 @@ contributor.start = function (next) {
                   console.log(color("✔", "green+bold"),
                     "Contributors added to your",
                     color("contributors.md", "magenta"),'as:');
-                  console.log(color(markdown, "magenta"));
+                  console.log(color(markdown, "yellow"));
                   fs.writeFile('contributors.md', markdown, function(err) {
                     if(err) {
                       console.log(err);
