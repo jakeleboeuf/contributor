@@ -15,8 +15,30 @@ var path       = require('path'),
     rootDir    = process.cwd(),
     sourceJson = path.join(rootDir, 'package.json'),
     dupJson    = path.join(rootDir, '.package.json'),
-    pack       = require(sourceJson),
+    pack       = require(sourceJson);
+
+
+if(!pack.repository) {
+  console.log(color('No Repository info found in your package.json.', 'red+bold'));
+  console.log(color('See the npm docs for formatting guidelines: https://www.npmjs.org/doc/json.html#repository', 'magenta'));
+  
+  // Jankfully kill the process
+  process.kill();
+  return;
+} else {
+  if(!pack.repository.url) {
+
+    console.log(color('No Repository url found in your package.json.', 'red+bold'));
+    console.log(color('See the npm docs for formatting info: https://www.npmjs.org/doc/json.html#repository', 'magenta'));
+    
+    // Jankfully kill the process
+    process.kill();
+    return;
+  } else {
     contribApi = pack.repository.url.split('/');
+  }
+}
+
 
 // *****************************
 // Contributor Module + Defaults
