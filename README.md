@@ -8,7 +8,7 @@ A simple [node](http://nodejs.org) module to grab your project contributors from
 
     $ npm install contributor -g
 
-or add it as one of your projects `package.json` dependencies like this:
+Or (preferably), add it as one of your projects `package.json` dependencies. Make sure you have a [valid repository property](https://www.npmjs.org/doc/json.html#repository) pointing to your repo... Something like this will do the trick:
   
   
 ```json
@@ -16,7 +16,12 @@ or add it as one of your projects `package.json` dependencies like this:
   ...
   "dependencies": {
     "contributor": "0.1.x"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/user/contributor.git"
   }
+  ...
 }
 ```
 
