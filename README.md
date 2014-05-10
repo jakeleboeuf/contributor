@@ -19,7 +19,7 @@ Or (preferably), add it as one of your projects `package.json` dependencies. Mak
   },
   "repository" : {
     "type" : "git",
-    "url" : "http://github.com/user/contributor.git"
+    "url" : "http://github.com/user/repo.git"
   }
   ...
 }
