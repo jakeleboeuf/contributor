@@ -1,4 +1,4 @@
-#Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.png)](https://travis-ci.org/jakeleboeuf/contributor) [![NPM version](https://badge.fury.io/js/contributor.png)](http://badge.fury.io/js/contributor)
+#Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.png)](https://travis-ci.org/jakeleboeuf/contributor) [![NPM version](https://badge.fury.io/js/contributor.png)](http://badge.fury.io/js/contributor) [![Gitter chat](https://badges.gitter.im/jakeleboeuf/contributor.png)](https://gitter.im/jakeleboeuf/contributor)
 
 A simple [node](http://nodejs.org) module to grab your project contributors from your github repo and add them to your package.json. You'll also be prompted to generate a Markdown version of your contributors list and save it to `contributors.md`.
 
