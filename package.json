@@ -14,11 +14,11 @@
   "main": "./lib/contributor",
   "license": "MIT",
   "keywords": [
-    "contributor",
-    "contribute",
-    "collaborator",
-    "collaborate",
     "author",
+    "collaborate",
+    "collaborator",
+    "contribute",
+    "contributor",
     "github",
     "package"
   ],
@@ -30,11 +30,11 @@
     "npm": "1.4.x"
   },
   "dependencies": {
-    "request": "2.34.x",
     "ansi-color": "0.2.x",
+    "contributor": "0.1.x",
     "github": "0.1.x",
     "prompt": "0.2.x",
-    "contributor": "0.1.x"
+    "request": "2.34.x"
   },
   "contributors": [
     {

@@ -71,7 +71,7 @@ It should look all spiffy, but unfortunaly I realized after pushing this that gi
 
 ***Screenshot of intended Markdown***
 
-![Prompt](https://raw.github.com/jakeleboeuf/contributor/master/img/preview.png)
+![Preview](https://raw.github.com/jakeleboeuf/contributor/master/img/preview.png)
 
 
 

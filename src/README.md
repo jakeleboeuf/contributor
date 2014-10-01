@@ -46,6 +46,17 @@ As of [v0.1.12](https://github.com/jakeleboeuf/contributor/releases/tag/v0.1.12)
 
 ![Prompt](https://raw.github.com/jakeleboeuf/contributor/master/img/mdPrompt.png)
 
+
+### contributors.md Preview
+
+It should look all spiffy, but unfortunaly I realized after pushing this that github does not support custom text colors and neato things. lame. I'll fix it someday.
+
+<br>
+***Screenshot of intended Markdown***
+
+![Preview](https://raw.github.com/jakeleboeuf/contributor/master/img/preview.png)
+
+
 ### Behind the scenes
 
 [Contributor](https://www.npmjs.org/package/contributor) hunts for repository.url in your your `package.json`. If it finds a valid repo url, it requests collaborator info from the github api and adds it to your `package.json`. Super simple. If your repo is private, you'll be prompted for your Github username/password.
