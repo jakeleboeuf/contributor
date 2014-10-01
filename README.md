@@ -1,17 +1,16 @@
-[![Stories in Ready](https://badge.waffle.io/jakeleboeuf/contributor.png?label=ready&title=Ready)](https://waffle.io/jakeleboeuf/contributor)
-#Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.png)](https://travis-ci.org/jakeleboeuf/contributor) [![NPM version](https://badge.fury.io/js/contributor.png)](http://badge.fury.io/js/contributor) [![Gitter chat](https://badges.gitter.im/jakeleboeuf/contributor.png)](https://gitter.im/jakeleboeuf/contributor)
+#Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.svg?branch=master)](https://travis-ci.org/jakeleboeuf/contributor) [![NPM version](https://badge.fury.io/js/contributor.svg)](http://badge.fury.io/js/contributor) [![Stories in Ready](https://badge.waffle.io/jakeleboeuf/contributor.png?label=ready&title=Ready)](https://waffle.io/jakeleboeuf/contributor)
 
 A simple [node](http://nodejs.org) module to grab your project contributors from your github repo and add them to your package.json. You'll also be prompted to generate a Markdown version of your contributors list and save it to `contributors.md`.
 
-  
+
 
 ## Install from [npm](https://www.npmjs.org/package/contributor)
 
     $ npm install contributor -g
 
 Or (preferably), add it as one of your projects `package.json` dependencies. Make sure you have a [valid repository property](https://www.npmjs.org/doc/json.html#repository) pointing to your repo... Something like this will do the trick:
-  
-  
+
+
 ```json
 {
   ...
@@ -29,7 +28,7 @@ Or (preferably), add it as one of your projects `package.json` dependencies. Mak
 ## Usage
 
 To get a record of your project's contribution info from your github repo, `cd` into the directory containing your `package.json` and run:
-  
+
 	$ contributor
 
 Bingo! Your `package.json` will be appended with something like this:
@@ -86,12 +85,12 @@ It should look all spiffy, but unfortunaly I realized after pushing this that gi
 #### Pro tip: Add a git push alias and kill a couple birds.
 
 	$ git config alias.pushc \!git push $1 $2 && contributor
-  
+
 This will simply add the pushc alias to your .git/config file like so:
 
 	[alias]
     	pushc = !git push $1 $2 && contributor
-    
+
 Then you can run `git pushc origin master`, and voila! Give it a try on your next project and let me know what you think!
 
 --
@@ -168,4 +167,4 @@ package.json **After** `$ contributor`:
 
 [![Support via Gittip](https://rawgithub.com/twolfson/gittip-badge/0.2.0/dist/gittip.png)](https://www.gittip.com/jakeleboeuf/)
 
-[![NPM](https://nodei.co/npm/contributor.png)](https://nodei.co/npm/contributor/) 
+[![NPM](https://nodei.co/npm/contributor.png)](https://nodei.co/npm/contributor/)
