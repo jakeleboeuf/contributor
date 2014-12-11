@@ -113,6 +113,17 @@ contributor.start = function (next) {
           user: contributor.username,
           repo: contributor.repo
         }, function(err, res) {
+          if (err) {
+            console.log(
+              color('✖ Error:', 'red+bold'),
+              color(JSON.parse(err.message).message, 'magenta')
+            );
+            console.log(
+              color('Read more at', 'yellow+bold'),
+              color(JSON.parse(err.message).documentation_url, 'yellow')
+            );
+            return;
+          }
           info = res;
           var contributors = [];
           i=0;
