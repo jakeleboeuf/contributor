@@ -49,7 +49,7 @@ var contributor = module.exports = {
   totalCommitsArray: [],
   username: contribApi[3],
   password: null,
-  repo: contribApi[4].split('.')[0],
+  repo: contribApi[4].replace('.git', '')
 };
 
 
