@@ -77,8 +77,8 @@ contributor.start = function (next) {
        var schema = {
         properties: {
           username: {
-            pattern: /^[a-zA-Z\s\-]+$/,
-            message: 'Name must be only letters, spaces, or dashes',
+            pattern: /^[a-zA-Z0-9\s\-]+$/,
+            message: 'Name must be only letters, digits, spaces, or dashes',
           },
           password: {
             hidden: true,
