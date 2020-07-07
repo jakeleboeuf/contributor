@@ -35,7 +35,7 @@
     "npm": "1.4.x"
   },
   "dependencies": {
-    "request": "2.34.x",
+    "request": "2.88.x",
     "ansi-color": "0.2.x",
     "github": "0.1.x",
     "prompt": "0.2.x",
