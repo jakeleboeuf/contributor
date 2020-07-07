@@ -38,7 +38,7 @@
     "ansi-color": "0.2.x",
     "github": "0.2.x",
     "prompt": "0.2.x",
-    "request": "2.51.x",
+    "request": "2.88.x",
     "yesno": "0.0.x"
   },
   "devDependencies": {
