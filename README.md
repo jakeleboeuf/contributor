@@ -1,7 +1,8 @@
 # ⚠ Contributor is deprecated ⚠
-> I wrote this package while I was trying to understand `.git`... It's poorly written and v scary 🤷. I'd recommend using the wonderful [all-contributors-cli](https://github.com/all-contributors/all-contributors-cli) package instead.
 
 [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.svg?branch=master)](https://travis-ci.org/jakeleboeuf/contributor) [![NPM version](https://badge.fury.io/js/contributor.svg)](http://badge.fury.io/js/contributor)
+
+> I wrote this package while I was trying to understand `.git`... It's poorly written and v scary 🤷. I'd recommend using the wonderful [all-contributors-cli](https://github.com/all-contributors/all-contributors-cli) package instead.
 
 A simple [node](http://nodejs.org) module to grab your project contributors from your github repo and add them to your package.json. You'll also be prompted to generate a Markdown version of your contributors list and save it to `contributors.md`.
 
@@ -92,7 +93,7 @@ Then you can run `git pushc origin master`, and voila! Give it a try on your nex
 
 --
 
-###Examle output
+### Examle output
 
 
 package.json **Before** `$ contributor`:
