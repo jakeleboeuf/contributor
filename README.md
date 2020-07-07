@@ -1,4 +1,7 @@
-#Contributor [![Build Status](https://travis-ci.org/jakeleboeuf/contributor.svg?branch=master)](https://travis-ci.org/jakeleboeuf/contributor) [![NPM version](https://badge.fury.io/js/contributor.svg)](http://badge.fury.io/js/contributor) [![Stories in Ready](https://badge.waffle.io/jakeleboeuf/contributor.png?label=ready&title=Ready)](https://waffle.io/jakeleboeuf/contributor)
+# ⚠ Contributor is deprecated ⚠
+> I wrote this package while I was trying to understand `.git`... It's poorly written and v scary 🤷. I'd recommend using the wonderful [all-contributors-cli](https://github.com/all-contributors/all-contributors-cli) package instead.
+
+[![Build Status](https://travis-ci.org/jakeleboeuf/contributor.svg?branch=master)](https://travis-ci.org/jakeleboeuf/contributor) [![NPM version](https://badge.fury.io/js/contributor.svg)](http://badge.fury.io/js/contributor)
 
 A simple [node](http://nodejs.org) module to grab your project contributors from your github repo and add them to your package.json. You'll also be prompted to generate a Markdown version of your contributors list and save it to `contributors.md`.
 
@@ -58,18 +61,12 @@ As of [v0.1.12](https://github.com/jakeleboeuf/contributor/releases/tag/v0.1.12)
 It should look all spiffy, but unfortunaly I realized after pushing this that github does not support custom text colors and neato things. lame. I'll fix it someday.
 
 <br>
+
 ***Example contributors.md***
 
 ###### Contributors
-[Jake LeBoeuf](https://github.com/jakeleboeuf)
-<font color="#dedede"><font color="#999">17 Commits</font> / <font color="#6cc644">133,879++</font> / <font color="#bd3c00"> 227--</font>
-<font color="#dedede">95.54%&nbsp;<font color="#dedede">|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</font><font color="#f4f4f4">||||||||||</font><br><br>
-[Drew Smith](https://github.com/jakeleboeuf)
-<font color="#999">1 Commits</font> / <font color="#6cc644">79++</font> / <font color="#bd3c00"> 2--</font>
-<font color="#dedede">04.46%&nbsp;<font color="#dedede">||||||||||</font><font color="#f4f4f4">|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</font></font></font><br><br>
-###### [Generated](https://github.com/jakeleboeuf/contributor) on Mon Aug 04 2014 14:10:14 GMT-0400 (EDT)
 
-***Screenshot of intended Markdown***
+***Generated Preview***
 
 ![Preview](https://raw.github.com/jakeleboeuf/contributor/master/img/preview.png)
 
@@ -94,6 +91,7 @@ This will simply add the pushc alias to your .git/config file like so:
 Then you can run `git pushc origin master`, and voila! Give it a try on your next project and let me know what you think!
 
 --
+
 ###Examle output
 
 
